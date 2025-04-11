@@ -1,0 +1,185 @@
+/* 
+ * Minimalist Style CSS
+ * For the Contact section with clean, minimal design aesthetics
+ */
+
+/* Minimalist Section Specific Styles */
+[data-style="minimalist"] {
+  background-color: #f8f8f8;
+  color: #222;
+  font-family: var(--body-font);
+  position: relative;
+}
+
+/* Minimalist Background */
+[data-style="minimalist"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(34, 34, 34, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(34, 34, 34, 0.03) 0%, transparent 20%);
+  z-index: 1;
+}
+
+/* Section Content */
+[data-style="minimalist"] .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+}
+
+/* Section Title */
+[data-style="minimalist"] .section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #222;
+  margin-bottom: var(--spacing-xl);
+}
+
+[data-style="minimalist"] .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #222;
+}
+
+/* Contact Content Layout */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+/* Contact Text */
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.contact-text p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Contact Form */
+.contact-form-container {
+  background-color: white;
+  padding: var(--spacing-lg);
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background-color: #f8f8f8;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  transition: all var(--transition-medium);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #555;
+  background-color: white;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: white;
+  color: #222;
+  border: 1px solid #222;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  grid-column: 1 / -1;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  color: #222;
+  font-size: 1.2rem;
+  transition: all var(--transition-medium);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  color: #555;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  [data-style="minimalist"] .section-title {
+    font-size: 2rem;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .contact-form-container {
+    padding: var(--spacing-md);
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,201 @@
+/* 
+ * Old-School Style CSS
+ * For the landing section with retro aesthetics
+ */
+
+/* Old-School Section Specific Styles */
+[data-style="old-school"] {
+  background-color: #000000;
+  color: #33ff00; /* Classic green terminal text */
+  font-family: var(--mono-font);
+  position: relative;
+}
+
+/* Retro Grid Background */
+.retro-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(51, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Landing Content */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: relative;
+  text-shadow: 
+    0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: 
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 
+      -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+/* Retro Text */
+.retro-text {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.8;
+  position: relative;
+  display: inline-block;
+}
+
+.retro-text::after {
+  content: '|';
+  position: absolute;
+  right: -15px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CTA Button */
+.landing-section .cta-button {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: transparent;
+  border: 2px solid #33ff00;
+  color: #33ff00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-section .cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 255, 0, 0.2);
+  transition: all var(--transition-medium);
+}
+
+.landing-section .cta-button:hover {
+  color: #000000;
+  background-color: #33ff00;
+}
+
+.landing-section .cta-button:hover::before {
+  left: 0;
+}
+
+/* Pixel Art Element */
+.pixel-art {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  box-shadow: 
+    /* Simple pixel art computer - can be enhanced with more detailed pixel art */
+    20px 20px #33ff00, 25px 20px #33ff00, 30px 20px #33ff00, 35px 20px #33ff00,
+    20px 25px #33ff00, 35px 25px #33ff00,
+    20px 30px #33ff00, 25px 30px #33ff00, 30px 30px #33ff00, 35px 30px #33ff00,
+    20px 35px #33ff00, 35px 35px #33ff00,
+    20px 40px #33ff00, 25px 40px #33ff00, 30px 40px #33ff00, 35px 40px #33ff00,
+    15px 45px #33ff00, 40px 45px #33ff00,
+    10px 50px #33ff00, 15px 50px #33ff00, 20px 50px #33ff00, 25px 50px #33ff00, 30px 50px #33ff00, 35px 50px #33ff00, 40px 50px #33ff00, 45px 50px #33ff00;
+  z-index: 2;
+}
+
+/* Header Modifications for Old-School Section */
+.landing-section ~ .header {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.landing-section ~ .header .logo h1,
+.landing-section ~ .header .main-nav a {
+  color: #33ff00;
+}
+
+.landing-section ~ .header .main-nav a::after {
+  background-color: #33ff00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .glitch-text {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+  }
+  
+  .retro-text {
+    font-size: 1.2rem;
+  }
+  
+  .pixel-art {
+    bottom: 20px;
+    right: 20px;
+    transform: scale(0.7);
+  }
+}

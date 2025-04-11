@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Developer Portfolio showcasing music passion, fashion interest, graphic design work, and coding projects">
+    <meta name="keywords" content="web developer, portfolio, music, fashion, graphic design, creative coding">
+    <meta name="author" content="Creative Developer">
+    
+    <title>Creative Developer Portfolio</title>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Section-specific CSS -->
+    <link rel="stylesheet" href="css/old-school.css">
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/minimalist.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Creative Dev</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#landing" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Landing Section - Old School Style -->
+    <section id="landing" class="landing-section" data-style="old-school" data-scroll-section>
+        <!-- Comment: Scroll transition will trigger when leaving this section -->
+        <div class="container">
+            <div class="landing-content">
+                <h2 class="glitch-text" data-scroll-element="fade-in">Creative Developer</h2>
+                <p class="retro-text" data-scroll-element="slide-up">Where code meets creativity</p>
+                <div class="cta-container" data-scroll-element="fade-in-delay">
+                    <a href="#about" class="cta-button">Explore My Work</a>
+                </div>
+            </div>
+            <div class="landing-visual" data-scroll-element="parallax">
+                <!-- Visual elements will be added with CSS/JS -->
+                <div class="retro-grid"></div>
+                <div class="pixel-art"></div>
+            </div>
+        </div>
+        <!-- Comment: Transition point to modern style -->
+        <div class="scroll-indicator" data-scroll-element="bounce">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Me Section - Modern Style -->
+    <section id="about" class="about-section" data-style="modern" data-scroll-section>
+        <!-- Comment: Scroll transition will change from old-school to modern style -->
+        <div class="container">
+            <h2 class="section-title" data-scroll-element="text-reveal">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text" data-scroll-element="fade-in-stagger">
+                    <h3>Who I Am</h3>
+                    <p>A creative developer with a passion for blending technology with artistic expression. My work sits at the intersection of code, design, and creative thinking.</p>
+                </div>
+                
+                <!-- Music Passion -->
+                <div class="about-card music-card" data-scroll-element="scale-in">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music Passion</h3>
+                    <p>My love for electronic and ambient music influences my creative approach. I play synthesizers and create soundscapes that inspire my visual work.</p>
+                    <ul class="interest-list">
+                        <li>Modular synthesis</li>
+                        <li>Ambient composition</li>
+                        <li>Audio-reactive visuals</li>
+                    </ul>
+                </div>
+                
+                <!-- Fashion Interest -->
+                <div class="about-card fashion-card" data-scroll-element="scale-in-delay">
+                    <div class="card-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Fashion Interest</h3>
+                    <p>I'm drawn to minimalist and avant-garde fashion that challenges conventional design. This aesthetic sensibility carries into my digital creations.</p>
+                    <ul class="interest-list">
+                        <li>Minimalist design</li>
+                        <li>Sustainable fashion</li>
+                        <li>Textile experimentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Comment: Transition point to transitional style -->
+    </section>
+
+    <!-- Projects Section - Transitional Style -->
+    <section id="projects" class="projects-section" data-style="transitional" data-scroll-section>
+        <!-- Comment: Scroll transition will blend modern and minimalist styles -->
+        <div class="container">
+            <h2 class="section-title" data-scroll-element="split-text">My Projects</h2>
+            
+            <!-- Graphic Design Work -->
+            <div class="project-category" data-scroll-element="fade-in">
+                <h3>Graphic Design</h3>
+                <div class="project-grid">
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Brand Identity System</h4>
+                        <p>A comprehensive visual identity for an emerging music label, featuring typography-driven design and dynamic color systems.</p>
+                    </div>
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Editorial Design</h4>
+                        <p>Layout and typographic exploration for an independent fashion magazine, balancing experimental and functional design approaches.</p>
+                    </div>
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Poster Series</h4>
+                        <p>Collection of event posters for electronic music events, combining digital techniques with analog textures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Creative Coding Projects -->
+            <div class="project-category" data-scroll-element="fade-in-delay">
+                <h3>Creative Coding</h3>
+                <div class="project-grid">
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Audio Visualizer</h4>
+                        <p>Real-time audio visualization tool that transforms music into dynamic visual patterns using WebGL and the Web Audio API.</p>
+                    </div>
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Generative Art System</h4>
+                        <p>Algorithm-based artwork generator that creates unique compositions based on mathematical principles and randomization.</p>
+                    </div>
+                    <div class="project-card" data-scroll-element="tilt">
+                        <div class="project-image placeholder"></div>
+                        <h4>Interactive Typography</h4>
+                        <p>Experimental web project exploring the boundaries of interactive typography and user engagement through motion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Comment: Transition point to minimalist style -->
+    </section>
+
+    <!-- Contact Section - Minimalist Style -->
+    <section id="contact" class="contact-section" data-style="minimalist" data-scroll-section>
+        <!-- Comment: Scroll transition will complete the style journey to minimalist -->
+        <div class="container">
+            <h2 class="section-title" data-scroll-element="fade-in">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-text" data-scroll-element="slide-in">
+                    <p>Interested in collaborating or just want to say hello? I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                </div>
+                <div class="contact-form-container" data-scroll-element="fade-in-delay">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="social-links" data-scroll-element="stagger-fade">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Creative Developer. All rights reserved.</p>
+                <p class="footer-note">Built with passion and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

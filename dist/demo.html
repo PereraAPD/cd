@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo page showcasing the features of the Creative Developer Portfolio">
+    <title>Portfolio Demo - Creative Developer</title>
+    <style>
+        :root {
+            --primary-color: #6b17e6;
+            --secondary-color: #29324a;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --font-main: 'Roboto', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            padding: 0;
+            margin: 0;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .style-preview {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .style-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .animation-demo {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .animation-demo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .code-block {
+            background: #f1f1f1;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #5512c0;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Creative Developer Portfolio Demo</h1>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="intro">
+            <h2>Interactive Portfolio Website</h2>
+            <p>This demo page showcases the key features and visual styles of the Creative Developer Portfolio website. The portfolio is designed with three distinct visual styles that transition as users scroll through different sections.</p>
+            
+            <a href="index.html" class="btn">View Full Portfolio</a>
+        </section>
+        
+        <section id="visual-styles">
+            <h2>Visual Styles</h2>
+            <p>The portfolio features three distinct visual styles that create a unique browsing experience:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="screenshots/old-school-style.png" alt="Old-School Style Preview">
+                    <div class="feature-content">
+                        <h3>Old-School Style</h3>
+                        <p>Features a retro aesthetic with wheat-colored background, brown accents, monospace typography, and pixel-art inspired elements.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="screenshots/modern-style.png" alt="Modern Style Preview">
+                    <div class="feature-content">
+                        <h3>Modern Style</h3>
+                        <p>Features a contemporary look with dark blue background, vibrant purple accents, clean sans-serif typography, and smooth animations.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="screenshots/minimalist-style.png" alt="Minimalist Style Preview">
+                    <div class="feature-content">
+                        <h3>Minimalist Style</h3>
+                        <p>Features a clean, minimal design with white background, subtle gray accents, minimal decoration, and focus on typography and whitespace.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="style-preview">
+                <h3>Combined Preview</h3>
+                <img src="screenshots/combined-preview.png" alt="Combined Style Preview">
+            </div>
+        </section>
+        
+        <section id="animations">
+            <h2>Scroll Transitions & Animations</h2>
+            <p>The portfolio website features smooth, engaging animations that trigger as users scroll through the content:</p>
+            
+            <div class="animation-demo">
+                <h3>Scroll-Based Transitions</h3>
+                <img src="animations/scroll-transition.gif" alt="Scroll Transition Animation">
+                <p>Elements transition and transform based on scroll position, creating a dynamic and engaging user experience.</p>
+            </div>
+            
+            <div class="animation-demo">
+                <h3>Style Transitions</h3>
+                <img src="animations/style-transition.gif" alt="Style Transition Animation">
+                <p>Visual styles smoothly transition between sections, creating a cohesive yet varied browsing experience.</p>
+            </div>
+            
+            <div class="code-block">
+<pre>// Example of scroll-based animation implementation
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+  trigger: "#projects",
+  start: "top center",
+  end: "bottom center",
+  onEnter: () => gsap.to(".project-card", {
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    duration: 0.8
+  }),
+  onLeaveBack: () => gsap.to(".project-card", {
+    opacity: 0,
+    y: 50,
+    stagger: 0.1,
+    duration: 0.5
+  })
+});</pre>
+            </div>
+        </section>
+        
+        <section id="responsive">
+            <h2>Responsive Design</h2>
+            <p>The portfolio is fully responsive and optimized for all device sizes:</p>
+            
+            <ul>
+                <li>Mobile-first approach ensures smooth experience on smartphones</li>
+                <li>Tablet-optimized layouts for medium-sized screens</li>
+                <li>Desktop layouts take advantage of larger screen real estate</li>
+                <li>Animations and transitions adapt to different screen sizes</li>
+            </ul>
+        </section>
+        
+        <section id="performance">
+            <h2>Performance Optimizations</h2>
+            <p>The website is optimized for fast loading and smooth performance:</p>
+            
+            <ul>
+                <li>Minified CSS and JavaScript files</li>
+                <li>Optimized image assets</li>
+                <li>Lazy loading for images</li>
+                <li>Efficient animation rendering</li>
+                <li>Reduced motion option for accessibility</li>
+            </ul>
+        </section>
+        
+        <section id="accessibility">
+            <h2>Accessibility Features</h2>
+            <p>The portfolio is designed with accessibility in mind:</p>
+            
+            <ul>
+                <li>Semantic HTML structure</li>
+                <li>ARIA attributes for enhanced screen reader support</li>
+                <li>Keyboard navigation support</li>
+                <li>Sufficient color contrast for text readability</li>
+                <li>Support for reduced motion preferences</li>
+            </ul>
+        </section>
+        
+        <section id="get-started">
+            <h2>Get Started</h2>
+            <p>Ready to explore the full portfolio?</p>
+            <a href="index.html" class="btn">View Portfolio</a>
+            <p>For documentation on customization and deployment, please refer to the README file.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Creative Developer. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
